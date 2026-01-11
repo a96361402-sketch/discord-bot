@@ -194,6 +194,11 @@ class Tickets(commands.Cog):
         )
 
         await channel.send(embed=embed)
+        from discord.ext import commands
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send("Pong!")
 
 async def setup(bot):
     await bot.add_cog(Tickets(bot))
